@@ -8,6 +8,7 @@ import { TypewriterComponent } from './components/typewriter/typewriter.componen
 import { CompComponent } from './pages/comp/comp.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CoverComponent } from './components/cover/cover.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +21,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     NavbarComponent,
-    NgbModule
+    NgbModule,
+    CoverComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
