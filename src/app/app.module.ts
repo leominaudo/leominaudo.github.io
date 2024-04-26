@@ -9,6 +9,7 @@ import { CompComponent } from './pages/comp/comp.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoverComponent } from './components/cover/cover.component';
+import { RowInfoComponent } from './components/row-info/row-info.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CoverComponent } from './components/cover/cover.component';
     NavbarComponent,
     NgbModule,
     CoverComponent,
+    RowInfoComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
