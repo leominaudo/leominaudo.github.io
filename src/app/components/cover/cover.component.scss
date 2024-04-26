@@ -53,3 +53,27 @@
   border-radius: 50%;
   border: 10px solid;
 }
+
+.card-cover {
+  width: 45%;
+}
+
+.container-cover {
+  position: absolute;
+  width: 100%;
+  min-height: 275px;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  row-gap: 30px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+
+@media screen and (max-width: 960px) {
+  .card-cover {
+    width: 90%;
+  }
+}

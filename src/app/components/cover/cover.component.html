@@ -1,11 +1,13 @@
 <div
   style="
-    padding-top: 15px;
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: stretch;
     gap: 20px;
+    margin-bottom: 15px;
   "
+  [ngStyle]="{ 'min-height': outerDivHeight + 'px' }"
 >
   <div class="row-code">
     <div [style.width.%]="space"></div>
@@ -100,11 +102,24 @@
       [ngStyle]="{ background: green }"
     ></div>
   </div>
-  <div style="position: absolute">
-    <img
-      class="avatar border-light"
-      src="/assets/image/photo.jpg"
-      alt="Giovanna Ferrero"
-    />
+
+  <!--bg-opacity-75 bg-white-->
+  <div #innerDiv class="bg-opacity-75 bg-white container-cover">
+    <div class="card-cover" style="padding-left: 5%">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">
+        This is a wider card with supporting text below as a natural lead-in to
+        additional content. This content is a little bit longer.
+      </p>
+      <p class="card-text">Last updated 3 mins ago</p>
+    </div>
+
+    <div style="flex-grow: 2; display: flex; justify-content: center">
+      <img
+        class="avatar border-light"
+        src="/assets/image/photo.jpg"
+        alt="Giovanna Ferrero"
+      />
+    </div>
   </div>
 </div>
