@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit, input, signal } from '@angular/core';
 
 @Component({
   selector: 'app-row-info',
@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
   templateUrl: './row-info.component.html',
   styleUrl: './row-info.component.scss',
 })
-export class RowInfoComponent {}
+export class RowInfoComponent {
+  bgGrey = input<boolean>(true);
+}
