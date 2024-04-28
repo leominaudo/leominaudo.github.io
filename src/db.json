@@ -1,0 +1,65 @@
+{
+  "posts": [
+    { "id": "1", "title": "a title", "views": 100 },
+    { "id": "2", "title": "another title", "views": 200 }
+  ],
+  "comments": [
+    { "id": "1", "text": "a comment about post 1", "postId": "1" },
+    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "chip": [
+    {
+      "id": 1,
+      "text": "testo"
+    }
+  ],
+
+  "infoType": [
+    { "id": "1", "title": "Esperienze" },
+    { "id": "2", "title": "Formazione" },
+    { "id": "3", "title": "Contatti" }
+  ],
+  "organization": [
+    {
+      "id": "1",
+      "title": "Federazione Italiana Pallacanestro",
+      "link": "https://fip.it/"
+    },
+    {
+      "id": "2",
+      "title": "Maps Group SPA",
+      "link": "https://mapsgroup.it/"
+    }
+  ],
+  "cards": [
+    {
+      "id": "1",
+      "title": "Arbitro di pallacanestro",
+      "emoji": "🏀",
+      "period": "11/2015 - 04/2018",
+      "description": "Arbitro regionale di serie D, B/F e C/F (5a categoria).",
+      "organizationId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Software Developer",
+      "emoji": "",
+      "period": "11/2015 - 04/2018",
+      "description": "Description SW",
+      "organizationId": "2"
+    }
+  ],
+  "skills": [
+    { "id": "1", "description": "Responsabilità" },
+    { "id": "2", "description": "Angular" },
+    { "id": "3", "description": "Spring Boot" }
+  ],
+  "cardSkills": [
+    { "cardId": "1", "skillId": "1" },
+    { "cardId": "2", "skillId": "2" },
+    { "cardId": "2", "skillId": "3" }
+  ]
+}
