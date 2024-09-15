@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TypewriterComponent } from './components/typewriter/typewriter.component';
-import { CompComponent } from './pages/comp/comp.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoverComponent } from './components/cover/cover.component';
@@ -13,7 +12,6 @@ import { RowInfoComponent } from './components/row-info/row-info.component';
 
 @NgModule({
   declarations: [
-    CompComponent,
     TypewriterComponent,
     HomeComponent,
     AppComponent,
@@ -29,4 +27,4 @@ import { RowInfoComponent } from './components/row-info/row-info.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
