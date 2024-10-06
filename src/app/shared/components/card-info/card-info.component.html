@@ -1,0 +1,19 @@
+<app-card [bgColor]="bgColor()" [border]="border()">
+  <!--Period-->
+  @if (period()) {
+  <app-text-muted [label]="period()" />
+
+  }
+  <!--Title-->
+  @if (title()) {
+  <div>TITOLO</div>
+  }
+  <!--Description-->
+  @if (description()) {
+  <div>descrizione</div>
+  }
+  <!--Chips-->
+  @for (chip of chips(); track $index) {
+  <app-chip [label]="chip" />
+  }
+</app-card>

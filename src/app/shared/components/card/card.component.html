@@ -1,0 +1,10 @@
+<div
+  class="card"
+  [ngClass]="{ 'bg-light': bgColorIsSecondary() }"
+  [ngStyle]="{
+    'background-color': bgColorIsPrimary() ? 'white' : '',
+    'border-style': border()
+  }"
+>
+  <ng-content />
+</div>

@@ -1,21 +1,14 @@
-import { CommonModule, NgClass } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import {
   Component,
-  ElementRef,
   OnInit,
   Signal,
   computed,
   signal,
 } from '@angular/core';
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import {
   Observable,
-  debounceTime,
-  distinctUntilChanged,
-  fromEvent,
-  map,
-  pipe,
-  tap,
 } from 'rxjs';
 
 @Component({
@@ -44,7 +37,7 @@ export class NavbarComponent implements OnInit {
 
   show: boolean = false;
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     /*   this.closeIcon$ = fromEvent(
@@ -65,9 +58,8 @@ export class NavbarComponent implements OnInit {
   typeWriter() {
     if (this.index < this.text.length) {
       this.textToShow += this.text.charAt(this.index);
-      this.textFinal = `<${this.textToShow}${
-        this.index === this.text.length - 1 ? '' : '|'
-      }>`;
+      this.textFinal = `<${this.textToShow}${this.index === this.text.length - 1 ? '' : '|'
+        }>`;
       this.index++;
 
       setTimeout(() => this.typeWriter(), this.speed);
