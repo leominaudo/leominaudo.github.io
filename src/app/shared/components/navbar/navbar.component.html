@@ -1,6 +1,17 @@
-<nav class="navbar fixed-top navbar-expand-lg bg-light">
+<nav
+  class="navbar fixed-top navbar-expand-lg bg-light"
+  [ngClass]="{
+    'bg-light': themeService.isLight(),
+    'bg-dark': themeService.isDark()
+  }"
+>
   <div class="container-fluid">
-    <a class="navbar-brand mb-0 h1" href="#">{{ this.textFinal }}</a>
+    <a
+      class="navbar-brand mb-0 h1"
+      href="#"
+      [ngStyle]="{ color: themeService.isLight() ? '' : 'white' }"
+      >{{ this.textFinal }}</a
+    >
     <button
       id="button-navbar"
       class="navbar-toggler"
@@ -32,13 +43,29 @@
         [style.display]="this.show ? '' : 'none !important'"
       >
         <li class="nav-item" (click)="setMenuOpened()">
-          <a class="nav-link" aria-current="page" href="#">Esperienze</a>
+          <a
+            class="nav-link"
+            aria-current="page"
+            href="#"
+            [ngStyle]="{ color: themeService.isLight() ? '' : 'white' }"
+            >Esperienze</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Formazione</a>
+          <a
+            class="nav-link"
+            href="#"
+            [ngStyle]="{ color: themeService.isLight() ? '' : 'white' }"
+            >Formazione</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contatti</a>
+          <a
+            class="nav-link"
+            href="#"
+            [ngStyle]="{ color: themeService.isLight() ? '' : 'white' }"
+            >Contatti</a
+          >
         </li>
       </ul>
     </div>

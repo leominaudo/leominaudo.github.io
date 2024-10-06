@@ -8,6 +8,7 @@ export class ThemeService {
   private THEME_STORAGE_KEY = 'theme';
   selectedTheme = signal<Theme>('light');
   isLight = computed<boolean>(() => this.selectedTheme() === 'light');
+  isDark = computed<boolean>(() => this.selectedTheme() === 'dark');
 
   initTheme() {
     const storedTheme = localStorage.getItem(this.THEME_STORAGE_KEY);
@@ -23,6 +24,7 @@ export class ThemeService {
    */
   setTheme(theme: Theme) {
     this.selectedTheme.set(theme);
+    console.log('a');
     localStorage.setItem(this.THEME_STORAGE_KEY, theme);
   }
 

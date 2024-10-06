@@ -48,10 +48,80 @@
                           </div>
                         </div>
                     </div>
-                    <app-card-info bgColor="secondary" border="dashed"></app-card-info>
+                    <app-card-info 
+                    bgColor="secondary" 
+                    border="dashed" 
+                    [cardInfo]="{
+                        period: '11/2015 - 04/2018',
+                        title: 'Arbitro di pallacanestro 🏀',
+                        description: 'Arbitro regionale di serie D, B/F e C/F (5a categoria).',
+                        chips: []
+                    }"
+                     />
                     
                 </div>
                 <div class="fs-5 mb-0 "> <a href="https://fip.it/" target="_blank" class="link-dark" style="text-decoration: none;">{{'\<Federazione Italiana Pallacanetro/>'}}</a></div>
+            </div>
+            </div>
+            <div class="fs-5 mb-0 h1" style="position: sticky; 
+            top: 54px; 
+            padding-top: 10px  !important;
+            z-index: 2;">{{'\<Esperienze/>'}}</div>
+    </div>
+</div>
+<div  [ngClass]="{'bg-light': bgGrey()}" style="height: 30%; " 
+[ngStyle]="{ 'background-color': bgGrey()? '': 'white'}">
+
+    <div  data-aos="fade-right" style="padding-left: 5%; padding-top: 10px; padding-bottom: 10px; ">
+        <div>
+        <div 
+       
+        [ngClass]="{'bg-light': bgGrey()}" 
+        [ngStyle]="{ 'background-color': bgGrey()? '': 'white'}"
+        class="fs-5 mb-0 h1" 
+        style="
+        position: sticky; 
+        top: 54px; 
+        padding-bottom: 10px  !important; 
+        z-index: 1;"
+
+        >{{'\<Esperienze>'}}</div>
+            <div  data-aos="fade-right" style="padding-left: 5%; display: flex; flex-direction: column; gap: 5px;">  
+            <app-sub-tag style="width: 80%;" link="https://fip.it/" name="Federazione Italiana Pallacanetro">
+                <app-card-info 
+                
+                    style="width: 80%;"
+                    bgColor="secondary" 
+                    border="dashed" 
+                    [cardInfo]="{
+                        period: '11/2015 - 04/2018',
+                        title: 'Arbitro di pallacanestro 🏀',
+                        description: 'Arbitro regionale di serie D, B/F e C/F (5a categoria).',
+                        chips: ['Responsabilità', 'Responsabilità']
+                    }"
+                     />
+            </app-sub-tag>
+                <!-- <div class="fs-5 mb-0 "> <a href="https://fip.it/" target="_blank" class="link-dark" style="text-decoration: none;">{{'\<Federazione Italiana Pallacanetro>'}}</a></div>
+                <div style="display: flex; flex-direction: row; align-items: stretch; gap:5%;">
+                    <div > 
+                        <div style=" width: 4px; height: 100%; border-radius: 25px; "
+                        class="bg-dark"></div>
+                    </div>
+                    
+                    <app-card-info 
+                    style="width: 80%;"
+                    bgColor="secondary" 
+                    border="dashed" 
+                    [cardInfo]="{
+                        period: '11/2015 - 04/2018',
+                        title: 'Arbitro di pallacanestro 🏀',
+                        description: 'Arbitro regionale di serie D, B/F e C/F (5a categoria).',
+                        chips: ['Responsabilità', 'Responsabilità']
+                    }"
+                     />
+                    
+                </div>
+                <div class="fs-5 mb-0 "> <a href="https://fip.it/" target="_blank" class="link-dark" style="text-decoration: none;">{{'\<Federazione Italiana Pallacanetro/>'}}</a></div> -->
             </div>
             </div>
             <div class="fs-5 mb-0 h1" style="position: sticky; 

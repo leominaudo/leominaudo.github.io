@@ -1,19 +1,26 @@
 <app-card [bgColor]="bgColor()" [border]="border()">
   <!--Period-->
   @if (period()) {
-  <app-text-muted [label]="period()" />
+  <div class="text-muted mb-1" style="font-size: small">
+    {{ period() }}
+  </div>
 
   }
   <!--Title-->
   @if (title()) {
-  <div>TITOLO</div>
+  <h5 class="card-title">{{ title() }}</h5>
   }
   <!--Description-->
   @if (description()) {
-  <div>descrizione</div>
+  <p class="card-text">{{ description() }}</p>
   }
   <!--Chips-->
-  @for (chip of chips(); track $index) {
-  <app-chip [label]="chip" />
+  @if (chips()) {
+  <div class="d-flex flex-row column-gap-1">
+    @for (chip of chips(); track $index) {
+    <app-chip [label]="chip" />
+
+    }
+  </div>
   }
 </app-card>

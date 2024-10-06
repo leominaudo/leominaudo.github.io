@@ -4,12 +4,14 @@ import {
   OnInit,
   Signal,
   computed,
+  inject,
   signal,
 } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import {
   Observable,
 } from 'rxjs';
+import { ThemeService } from '../../service/theme/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -19,15 +21,13 @@ import {
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent implements OnInit {
+  themeService = inject(ThemeService);
+
   closeIcon$: Observable<boolean> = new Observable<boolean>();
 
   menuOpened = signal(false);
 
   isMenuOpened: Signal<boolean> = computed(() => this.menuOpened());
-
-  setMenuOpened() {
-    this.menuOpened.set(!this.menuOpened());
-  }
 
   text: string = 'Leonardo';
   textToShow: string = '';
@@ -37,7 +37,9 @@ export class NavbarComponent implements OnInit {
 
   show: boolean = false;
 
-  constructor() { }
+  constructor() {
+    console.log(this.themeService.isDark())
+  }
 
   ngOnInit(): void {
     /*   this.closeIcon$ = fromEvent(
@@ -67,5 +69,9 @@ export class NavbarComponent implements OnInit {
       this.show = true;
       console.log('end');
     }
+  }
+
+  setMenuOpened() {
+    this.menuOpened.set(!this.menuOpened());
   }
 }
