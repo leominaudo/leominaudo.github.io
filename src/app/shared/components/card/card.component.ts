@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, input } from '@angular/core';
+import { Component, computed, inject, input, signal } from '@angular/core';
 import { ChipComponent } from '../chip/chip.component';
-import { CardBgColor, CardBorder } from './card';
+import { CardBorder } from './card';
+import { ThemeService } from '../../service/theme/theme.service';
+import { BgColorType } from '../../service/theme/theme';
 
 @Component({
   selector: 'app-card',
@@ -14,9 +16,10 @@ import { CardBgColor, CardBorder } from './card';
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-  bgColor = input<CardBgColor>('primary');
+  bgColor = input<BgColorType>('primary');
   border = input<CardBorder>('solid');
 
-  bgColorIsPrimary = computed(() => this.bgColor() === 'primary');
-  bgColorIsSecondary = computed(() => this.bgColor() === 'secondary');
+  themeService = inject(ThemeService);
+
+  classBgColor = computed<string>(() => this.themeService.getClassBgColor(this.bgColor()));
 }

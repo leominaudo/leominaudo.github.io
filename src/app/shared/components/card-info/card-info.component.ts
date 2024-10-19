@@ -1,9 +1,10 @@
 import { Component, computed, input } from '@angular/core';
 import { CardComponent } from '../card/card.component';
-import { CardBgColor, CardBorder } from '../card/card';
+import { CardBorder } from '../card/card';
 import { TextMutedComponent } from "../text-muted/text-muted.component";
 import { ChipComponent } from '../chip/chip.component';
 import { CardInfo } from './cardInfo';
+import { BgColorType } from '../../service/theme/theme';
 
 @Component({
   selector: 'app-card-info',
@@ -14,7 +15,7 @@ import { CardInfo } from './cardInfo';
 })
 export class CardInfoComponent {
   /* Input styles */
-  bgColor = input<CardBgColor>('primary');
+  bgColor = input<BgColorType>('primary');
   border = input<CardBorder>('solid');
 
   /* Input */

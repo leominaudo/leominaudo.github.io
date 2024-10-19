@@ -1,5 +1,5 @@
 import { Injectable, computed, inject, signal } from '@angular/core';
-import { Theme } from './theme';
+import { BgColorType, Theme } from './theme';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class ThemeService {
     const storedTheme = localStorage.getItem(this.THEME_STORAGE_KEY);
 
     if (this.isValidTheme(storedTheme)) {
-      this.setTheme(storedTheme);
+      this.selectedTheme.set(storedTheme);
     }
   }
 
@@ -24,8 +24,14 @@ export class ThemeService {
    */
   setTheme(theme: Theme) {
     this.selectedTheme.set(theme);
-    console.log('a');
     localStorage.setItem(this.THEME_STORAGE_KEY, theme);
+  }
+
+  getClassBgColor(bgColorType: BgColorType): string {
+    if (bgColorType === 'primary') {
+      return this.isLight() ? "bg-white" : "bg-secondary";
+    }
+    return this.isLight() ? "bg-light" : "bg-dark";
   }
 
   private isValidTheme(theme: string | null): theme is Theme {

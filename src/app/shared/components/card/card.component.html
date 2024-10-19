@@ -1,8 +1,7 @@
 <div
   class="card"
-  [ngClass]="{ 'bg-light': bgColorIsSecondary() }"
+  [class]="classBgColor()"
   [ngStyle]="{
-    'background-color': bgColorIsPrimary() ? 'white' : '',
     'border-style': border()
   }"
 >
