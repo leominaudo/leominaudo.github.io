@@ -12,11 +12,12 @@ import {
   Observable,
 } from 'rxjs';
 import { ThemeService } from '../../service/theme/theme.service';
+import { SwitchButtonThemeComponent } from '../switch-button-theme/switch-button-theme.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, SwitchButtonThemeComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })

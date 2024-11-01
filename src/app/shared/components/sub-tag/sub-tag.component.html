@@ -1,26 +1,35 @@
-<div class="fs-5 mb-0">
-  <a
-    [href]="link()"
-    target="_blank"
-    class="link-dark"
-    style="text-decoration: none"
-    >{{ openTag() }}</a
+<div>
+  <div
+    [class]="classBgColor()"
+    class="fs-5 mb-0"
+    style="position: sticky; z-index: 1; top: 98px; padding: 5px 0 5px 0"
   >
-</div>
-<div class="d-flex flex-row align-items-stretch pad-right" style="gap: 5%">
-  <div>
-    <div class="bg-dark horizontal-bar"></div>
+    <a
+      [href]="link()"
+      target="_blank"
+      [class]="themeService.isLight() ? 'link-dark' : 'link-light'"
+      style="text-decoration: none"
+      >{{ openTag() }}</a
+    >
   </div>
-  <div class="w-100">
-    <ng-content />
+  <div class="d-flex flex-row align-items-stretch pad-right" style="gap: 5%">
+    <div>
+      <div
+        class="horizontal-bar"
+        [class]="themeService.isLight() ? 'bg-dark' : 'bg-light'"
+      ></div>
+    </div>
+    <div class="w-100">
+      <ng-content />
+    </div>
   </div>
 </div>
 <div class="fs-5 mb-0">
   <a
     [href]="link()"
     target="_blank"
-    class="link-dark"
-    style="text-decoration: none"
+    [class]="themeService.isLight() ? 'link-dark' : 'link-light'"
+    style="text-decoration: none; padding: 5px 0 5px 0"
     >{{ closeTag() }}</a
   >
 </div>

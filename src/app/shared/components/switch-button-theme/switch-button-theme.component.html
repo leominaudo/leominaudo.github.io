@@ -1,0 +1,8 @@
+<button
+  type="button"
+  class="btn rounded-circle"
+  [class]="themeService.isLight() ? 'btn-light' : 'btn-dark'"
+  (click)="setTheme()"
+>
+  <i [class]="value() ? 'bi bi-moon-fill' : 'bi bi-brightness-high'"></i>
+</button>

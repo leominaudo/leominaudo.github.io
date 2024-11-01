@@ -7,19 +7,13 @@
       top: 54px;
       padding-top: 10px !important;
       padding-bottom: 10px !important;
-      z-index: 1;
+      z-index: 100;
     "
+    [ngStyle]="{ color: themeService.isLight() ? '' : 'white' }"
   >
     {{ openTag() }}
   </div>
-  <!-- <div  data-aos="fade-right" style="padding-left: 5%; display: flex; flex-direction: column; gap: 5px;"> 
-        
-    </div> -->
-  <div
-    data-aos="fade-right"
-    class="w-100"
-    style="padding-left: 5%; padding-right: 5%"
-  >
+  <div class="w-100" style="padding-left: 5%; padding-right: 5%">
     <ng-content />
   </div>
 </div>
@@ -34,6 +28,7 @@
     padding-bottom: 10px !important;
     z-index: 2;
   "
+  [ngStyle]="{ color: themeService.isLight() ? '' : 'white' }"
 >
   {{ closeTag() }}
 </div>

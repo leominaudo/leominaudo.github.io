@@ -1,19 +1,23 @@
-import { Component, computed, input } from '@angular/core';
+import { Component, computed, inject, input } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { CardBorder } from '../card/card';
 import { TextMutedComponent } from "../text-muted/text-muted.component";
 import { ChipComponent } from '../chip/chip.component';
 import { CardInfo } from './cardInfo';
 import { BgColorType } from '../../service/theme/theme';
+import { CommonModule } from '@angular/common';
+import { ThemeService } from '../../service/theme/theme.service';
 
 @Component({
   selector: 'app-card-info',
   standalone: true,
-  imports: [CardComponent, TextMutedComponent, ChipComponent],
+  imports: [CommonModule, CardComponent, TextMutedComponent, ChipComponent],
   templateUrl: './card-info.component.html',
   styleUrl: './card-info.component.scss'
 })
 export class CardInfoComponent {
+  themeService = inject(ThemeService);
+
   /* Input styles */
   bgColor = input<BgColorType>('primary');
   border = input<CardBorder>('solid');

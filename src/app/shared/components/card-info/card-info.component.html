@@ -1,18 +1,26 @@
 <app-card [bgColor]="bgColor()" [border]="border()">
   <!--Period-->
   @if (period()) {
-  <div class="text-muted mb-1" style="font-size: small">
+  <div
+    class="mb-1"
+    [ngClass]="themeService.isLight() ? 'text-muted' : 'text-light'"
+    style="font-size: small"
+  >
     {{ period() }}
   </div>
 
   }
   <!--Title-->
   @if (title()) {
-  <h5 class="card-title">{{ title() }}</h5>
+  <h5 class="card-title" [ngClass]="themeService.isLight() ? '' : 'text-light'">
+    {{ title() }}
+  </h5>
   }
   <!--Description-->
   @if (description()) {
-  <p class="card-text">{{ description() }}</p>
+  <p class="card-text" [ngClass]="themeService.isLight() ? '' : 'text-light'">
+    {{ description() }}
+  </p>
   }
   <!--Chips-->
   @if (chips()) {
