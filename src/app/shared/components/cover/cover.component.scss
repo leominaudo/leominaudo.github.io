@@ -29,22 +29,6 @@
   height: 20px;
   position: relative;
 }
-/*
-.demo {
-  animation: move;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-}
-
-@keyframes move {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(300px);
-  }
-}
-*/
 
 .avatar {
   vertical-align: middle;
@@ -61,7 +45,7 @@
 .container-cover {
   position: absolute;
   width: 100%;
-  min-height: 275px;
+  min-height: 300px;
   height: fit-content;
   display: flex;
   flex-direction: row;

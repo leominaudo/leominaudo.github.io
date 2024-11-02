@@ -5,6 +5,7 @@ import {
   Signal,
   computed,
   inject,
+  input,
   signal,
 } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -23,6 +24,8 @@ import { SwitchButtonThemeComponent } from '../switch-button-theme/switch-button
 })
 export class NavbarComponent implements OnInit {
   themeService = inject(ThemeService);
+
+  sections = input<string[]>();
 
   closeIcon$: Observable<boolean> = new Observable<boolean>();
 
@@ -43,18 +46,6 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    /*   this.closeIcon$ = fromEvent(
-      document.getElementById('button-navbar') as HTMLButtonElement,
-      'click'
-    ).pipe(
-      map(
-        () =>
-          (document.getElementById('button-navbar') as HTMLButtonElement)
-            .ariaExpanded === 'true'
-      ),
-      debounceTime(100),
-      distinctUntilChanged()
-    );*/
     this.typeWriter();
   }
 

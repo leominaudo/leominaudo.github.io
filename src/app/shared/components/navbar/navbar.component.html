@@ -15,6 +15,7 @@
     <button
       id="button-navbar"
       class="navbar-toggler"
+      [ngClass]="{ 'navbar-dark': themeService.isDark() }"
       style="border: none; box-shadow: none; width: 54px; height: 38px"
       type="button"
       data-bs-toggle="collapse"
@@ -42,23 +43,19 @@
         class="navbar-nav d-flex justify-content-end"
         [style.display]="this.show ? '' : 'none !important'"
       >
+        @for (section of sections(); track $index) {
+
         <li class="nav-item" (click)="setMenuOpened()">
           <a
             class="nav-link"
             aria-current="page"
-            href="#"
+            [href]="'#' + section"
             [ngStyle]="{ color: themeService.isLight() ? '' : 'white' }"
-            >Esperienze</a
+            >{{ section }}</a
           >
         </li>
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            href="#"
-            [ngStyle]="{ color: themeService.isLight() ? '' : 'white' }"
-            >Formazione</a
-          >
-        </li>
+        }
+
         <li class="nav-item">
           <a
             class="nav-link"

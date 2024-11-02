@@ -1,14 +1,8 @@
 <div
-  style="
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 20px;
-    margin-bottom: 15px;
-  "
+  style="display: flex; flex-direction: column; align-items: stretch; gap: 20px"
   [ngStyle]="{ 'min-height': outerDivHeight + 'px' }"
 >
+  <div class="row-code"></div>
   <div class="row-code">
     <div [style.width.%]="space"></div>
     <!--<div class="line animate demo"></div>-->
@@ -102,24 +96,35 @@
       [ngStyle]="{ background: green }"
     ></div>
   </div>
-
-  <!--bg-opacity-75 bg-white-->
-  <div #innerDiv class="bg-opacity-50 bg-white container-cover">
-    <div class="card-cover" style="padding-left: 5%">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This content is a little bit longer.
-      </p>
-      <p class="card-text">Last updated 3 mins ago</p>
-    </div>
-
-    <div style="flex-grow: 2; display: flex; justify-content: center">
-      <img
-        class="avatar border-light"
-        src="/assets/image/photo.jpg"
-        alt="Giovanna Ferrero"
-      />
+  <div class="row-code"></div>
+  <div
+    #innerDiv
+    class="bg-opacity-50 container-cover"
+    [class]="themeService.isLight() ? 'bg-white' : 'bg-black'"
+  >
+    <div
+      class="container-md d-flex flex-column-reverse flex-md-row gap-3"
+      style="margin-top: 20px; margin-bottom: 20px"
+    >
+      <div
+        class="card-cover flex-grow-1"
+        [class]="themeService.isLight() ? '' : 'text-light'"
+      >
+        <h4 class="card-title">{{ title() }}</h4>
+        <h6 class="card-title">{{ subTitle() }}</h6>
+        <br />
+        <p class="card-text" style="text-wrap: balance">
+          {{ description() }}
+        </p>
+      </div>
+      <div class="flex-grow-1 d-flex justify-content-center">
+        <img
+          class="avatar"
+          [class]="themeService.isLight() ? 'border-light' : 'border-dark'"
+          [src]="avatarSrc()"
+          alt="Leonardo Minaudo"
+        />
+      </div>
     </div>
   </div>
 </div>

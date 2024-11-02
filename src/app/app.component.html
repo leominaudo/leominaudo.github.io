@@ -1,18 +1,12 @@
 <div style="height: 56px">
-  <app-navbar></app-navbar>
+  <app-navbar [sections]="sections()" />
 </div>
 <div>
-  <app-cover></app-cover>
+  <app-cover [coverInfo]="coverInfo()" />
 </div>
 
-<app-row-info></app-row-info>
-<app-row-info [bgGrey]="false"></app-row-info>
-
-<!-- Esempio in un template HTML -->
-<a routerLink="/home" fragment="home">Vai a Componente 1</a>
-<a routerLink="/comp" fragment="comp">Vai a Componente 2</a>
-
-<!-- <router-outlet></router-outlet> -->
-<div style="height: 500px">
-  <app-home></app-home>
+@for (section of rowInfo(); track i; let i = $index) {
+<div [id]="section.name">
+  <app-row-info [section]="section" [index]="i" />
 </div>
+}

@@ -1,61 +1,28 @@
-@for (item of [1,2,3,4]; track i; let i=$index) {
-<app-row [bgColor]="i % 2 === 0 ? 'secondary' : 'primary'">
+<app-row [bgColor]="pair() ? 'secondary' : 'primary'">
   <app-tag
     data-aos="fade-right"
-    name="Esperienze"
-    [bgColor]="i % 2 === 0 ? 'secondary' : 'primary'"
+    [name]="section()?.name"
+    [bgColor]="pair() ? 'secondary' : 'primary'"
   >
+    @for (company of section()?.companies; track $index) {
     <app-sub-tag
       data-aos="fade-right"
-      link="https://fip.it/"
-      name="Federazione Italiana Pallacanetro"
-      [bgColor]="i % 2 === 0 ? 'secondary' : 'primary'"
+      [link]="company.link"
+      [name]="company.name"
+      [bgColor]="pair() ? 'secondary' : 'primary'"
     >
       <div class="d-flex flex-column gap-3">
+        @for (info of company.info; track $index) {
+
         <app-card-info
           data-aos="fade-right"
-          [bgColor]="i % 2 === 0 ? 'primary' : 'secondary'"
+          [bgColor]="pair() ? 'primary' : 'secondary'"
           border="dashed"
-          [cardInfo]="{
-            period: '11/2015 - 04/2018',
-            title: 'Arbitro di pallacanestro 🏀',
-            description:
-              'Arbitro regionale di serie D, B/F e C/F (5a categoria).',
-            chips: ['Responsabilità', 'Responsabilità']
-          }"
+          [cardInfo]="info"
         />
-        <app-card-info
-          data-aos="fade-right"
-          [bgColor]="i % 2 === 0 ? 'primary' : 'secondary'"
-          border="dashed"
-          [cardInfo]="{
-            period: '11/2015 - 04/2018',
-            title: 'Arbitro di pallacanestro 🏀',
-            description:
-              'Arbitro regionale di serie D, B/F e C/F (5a categoria).',
-            chips: ['Responsabilità', 'Responsabilità']
-          }"
-        />
+        }
       </div>
     </app-sub-tag>
-    <app-sub-tag
-      link="https://fip.it/"
-      name="Federazione Italiana Pallacanetro"
-      [bgColor]="i % 2 === 0 ? 'secondary' : 'primary'"
-    >
-      <app-card-info
-        [bgColor]="i % 2 === 0 ? 'primary' : 'secondary'"
-        border="dashed"
-        [cardInfo]="{
-          period: '11/2015 - 04/2018',
-          title: 'Arbitro di pallacanestro 🏀',
-          description:
-            'Arbitro regionale di serie D, B/F e C/F (5a categoria).',
-          chips: ['Responsabilità', 'Responsabilità']
-        }"
-      />
-    </app-sub-tag>
+    }
   </app-tag>
 </app-row>
-
-}
