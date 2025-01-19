@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoverComponent } from './shared/components/cover/cover.component';
 import { RowInfoComponent } from './shared/components/row-info/row-info.component';
 import { ThemeService } from './shared/service/theme/theme.service';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 function setTheme(themeService: ThemeService) {
   themeService.initTheme();
@@ -28,6 +29,7 @@ function setTheme(themeService: ThemeService) {
     NgbModule,
     CoverComponent,
     RowInfoComponent,
+    FooterComponent
   ],
   providers: [
     {

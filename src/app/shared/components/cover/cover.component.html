@@ -103,11 +103,12 @@
     [class]="themeService.isLight() ? 'bg-white' : 'bg-black'"
   >
     <div
-      class="container-md d-flex flex-column-reverse flex-md-row gap-3"
+      class="container-md d-flex flex-column-reverse flex-md-row gap-4"
       style="margin-top: 20px; margin-bottom: 20px"
     >
       <div
-        class="card-cover flex-grow-1"
+        class="card-cover flex-grow-1 d-flex flex-column justify-content-center"
+        style="padding-left: 5%; padding-right: 5%"
         [class]="themeService.isLight() ? '' : 'text-light'"
       >
         <h4 class="card-title">{{ title() }}</h4>

@@ -29,5 +29,7 @@ export class CardInfoComponent {
   title = computed(() => this.cardInfo()?.title);
   description = computed(() => this.cardInfo()?.description);
   chips = computed(() => this.cardInfo()?.chips);
+  company = computed(() => this.cardInfo()?.company);
+  list = computed(() => this.cardInfo()?.list);
 
 }

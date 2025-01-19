@@ -4,25 +4,15 @@
     [name]="section()?.name"
     [bgColor]="pair() ? 'secondary' : 'primary'"
   >
-    @for (company of section()?.companies; track $index) {
-    <app-sub-tag
-      data-aos="fade-right"
-      [link]="company.link"
-      [name]="company.name"
-      [bgColor]="pair() ? 'secondary' : 'primary'"
-    >
-      <div class="d-flex flex-column gap-3">
-        @for (info of company.info; track $index) {
+    @for (info of section()?.info; track $index) {
 
-        <app-card-info
-          data-aos="fade-right"
-          [bgColor]="pair() ? 'primary' : 'secondary'"
-          border="dashed"
-          [cardInfo]="info"
-        />
-        }
-      </div>
-    </app-sub-tag>
+    <app-card-info
+      data-aos="zoom-in"
+      [bgColor]="pair() ? 'primary' : 'secondary'"
+      border="dashed"
+      [cardInfo]="info"
+    />
+
     }
   </app-tag>
 </app-row>

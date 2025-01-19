@@ -14,11 +14,12 @@ import {
 } from 'rxjs';
 import { ThemeService } from '../../service/theme/theme.service';
 import { SwitchButtonThemeComponent } from '../switch-button-theme/switch-button-theme.component';
+import { ButtonLinkComponent } from "../button-link/button-link.component";
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterModule, SwitchButtonThemeComponent],
+  imports: [CommonModule, RouterModule, SwitchButtonThemeComponent, ButtonLinkComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
@@ -41,10 +42,6 @@ export class NavbarComponent implements OnInit {
 
   show: boolean = false;
 
-  constructor() {
-    console.log(this.themeService.isDark())
-  }
-
   ngOnInit(): void {
     this.typeWriter();
   }
@@ -59,7 +56,6 @@ export class NavbarComponent implements OnInit {
       setTimeout(() => this.typeWriter(), this.speed);
     } else {
       this.show = true;
-      console.log('end');
     }
   }
 

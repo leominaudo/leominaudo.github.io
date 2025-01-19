@@ -1,17 +1,13 @@
 export type Section = {
     name: string,
-    companies: Company[]
-}
-
-export type Company = {
-    name: string,
-    link: string,
     info: Info[]
 }
 
 export type Info = {
+    company: { name: string, link: string },
     period: string,
     title: string,
-    description: string,
+    description?: string,
+    list?: string[],
     chips: string[]
 }

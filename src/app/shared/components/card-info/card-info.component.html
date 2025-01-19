@@ -12,23 +12,51 @@
   }
   <!--Title-->
   @if (title()) {
-  <h5 class="card-title" [ngClass]="themeService.isLight() ? '' : 'text-light'">
+  <h5
+    class="card-title"
+    [ngClass]="themeService.isLight() ? '' : 'text-light'"
+    style="margin-bottom: 2px"
+  >
     {{ title() }}
   </h5>
   }
-  <!--Description-->
-  @if (description()) {
-  <p class="card-text" [ngClass]="themeService.isLight() ? '' : 'text-light'">
-    {{ description() }}
-  </p>
-  }
-  <!--Chips-->
-  @if (chips()) {
-  <div class="d-flex flex-row column-gap-1">
-    @for (chip of chips(); track $index) {
-    <app-chip [label]="chip" />
+  <!--Company-->
+  @if (company()) {
 
+  <a
+    class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+    [ngClass]="themeService.isLight() ? 'link-dark' : 'link-light'"
+    href=""
+  >
+    {{ company()?.name }}
+  </a>
+
+  }
+  <div style="margin-top: 16px">
+    <!--Description-->
+    @if (description()) {
+    <p class="card-text" [ngClass]="themeService.isLight() ? '' : 'text-light'">
+      {{ description() }}
+    </p>
+    }
+    <!--List-->
+    @if (list()) {
+    <ul [ngClass]="themeService.isLight() ? '' : 'text-light'">
+      @for (item of list(); track $index) {
+      <li>
+        {{ item }}
+      </li>
+      }
+    </ul>
+    }
+    <!--Chips-->
+    @if (chips()) {
+    <div class="d-flex flex-row column-gap-1">
+      @for (chip of chips(); track $index) {
+      <app-chip [label]="chip" />
+
+      }
+    </div>
     }
   </div>
-  }
 </app-card>
