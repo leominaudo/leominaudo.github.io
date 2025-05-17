@@ -76,28 +76,40 @@
           >
             Contatti
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <ul
+            class="dropdown-menu"
+            [ngClass]="{
+              'bg-light': themeService.isLight(),
+              'bg-dark': themeService.isDark()
+            }"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
             <li>
               <a
                 class="dropdown-item d-flex flex-row gap-2"
+                [ngClass]="
+                  themeService.isLight() ? 'link-dark ' : 'link-light '
+                "
                 href="https://github.com/leominaudo"
                 target="_blank"
-                ><i class="bi bi-github"></i><label>Git Hub</label>
+                ><i class="bi bi-github"></i>GitHub
               </a>
             </li>
             <li>
               <a
                 class="dropdown-item d-flex flex-row gap-2"
+                [ngClass]="themeService.isLight() ? 'link-dark' : 'link-light'"
                 href="https://www.linkedin.com/in/leonardo-minaudo"
                 target="_blank"
-                ><i class="bi bi-linkedin"></i> <label>LinkedIn</label>
+                ><i class="bi bi-linkedin"></i>LinkedIn
               </a>
             </li>
             <li>
               <a
                 class="dropdown-item d-flex flex-row gap-2"
+                [ngClass]="themeService.isLight() ? 'link-dark' : 'link-light'"
                 href="mailto:leominaudo24@gmail.com"
-                ><i class="bi bi-envelope-fill"></i> <label>E-mail</label></a
+                ><i class="bi bi-envelope-fill"></i> E-mail</a
               >
             </li>
           </ul>

@@ -14,12 +14,11 @@ import {
 } from 'rxjs';
 import { ThemeService } from '../../service/theme/theme.service';
 import { SwitchButtonThemeComponent } from '../switch-button-theme/switch-button-theme.component';
-import { ButtonLinkComponent } from "../button-link/button-link.component";
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterModule, SwitchButtonThemeComponent, ButtonLinkComponent],
+  imports: [CommonModule, RouterModule, SwitchButtonThemeComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })

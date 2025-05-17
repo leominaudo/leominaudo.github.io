@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
 import { TypewriterComponent } from './shared/components/typewriter/typewriter.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -19,7 +18,6 @@ function setTheme(themeService: ThemeService) {
 @NgModule({
   declarations: [
     TypewriterComponent,
-    HomeComponent,
     AppComponent,
   ],
   imports: [

@@ -11,3 +11,12 @@
     float: right !important;
   }
 }
+
+.bg-dark .dropdown-item:hover {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.bg-light .dropdown-item:hover {
+  background-color: #eeeeee;
+}

@@ -1,4 +1,4 @@
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import {
   AfterViewInit,
   Component,
@@ -21,7 +21,7 @@ import { CoverInfo } from './cover';
 @Component({
   selector: 'app-cover',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
+  imports: [CommonModule],
   templateUrl: './cover.component.html',
   styleUrl: './cover.component.scss',
 })
