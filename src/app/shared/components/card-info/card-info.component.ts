@@ -1,7 +1,6 @@
 import { Component, computed, inject, input } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { CardBorder } from '../card/card';
-import { TextMutedComponent } from "../text-muted/text-muted.component";
 import { ChipComponent } from '../chip/chip.component';
 import { CardInfo } from './cardInfo';
 import { BgColorType } from '../../service/theme/theme';
@@ -11,7 +10,7 @@ import { ThemeService } from '../../service/theme/theme.service';
 @Component({
   selector: 'app-card-info',
   standalone: true,
-  imports: [CommonModule, CardComponent, TextMutedComponent, ChipComponent],
+  imports: [CommonModule, CardComponent, ChipComponent],
   templateUrl: './card-info.component.html',
   styleUrl: './card-info.component.scss'
 })

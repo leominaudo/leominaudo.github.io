@@ -1,4 +1,13 @@
-<div class="bg-dark text-light" style="padding: 8px 12px; font-size: 1.25rem">
+<div
+  class="h1"
+  [ngClass]="{
+    'text-dark': themeService.isLight(),
+    'bg-light': themeService.isLight(),
+    'text-light': themeService.isDark(),
+    'bg-dark': themeService.isDark()
+  }"
+  style="padding: 8px 12px; font-size: 1.25rem"
+>
   <div>
     {{ tag }}
   </div>

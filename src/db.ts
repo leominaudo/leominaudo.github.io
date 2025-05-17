@@ -37,20 +37,11 @@ export const rowInfo: Section[] = [
             {
                 period: "10/2022 - 11/2022",
                 title: "Software Developer (Stage) 💻",
-                description: "Questa esperienza di tirocinio curricolare mi ha permesso di lavorare alla reingegnerizzazione di una dashboard di Business Intelligence dell'applicativo Gzoom, argomento della mia Tesi triennale in Ingegneria Informatica. Nello sviluppo di tale compito ho avuto modo di conoscere e approfondire alcune tecnologie e pattern di sviluppo utilizzati. In particolare, il framework Angular, TypeScript, JavaScript, il framework SpringBoot, Java, e i pattern REST e Controller - Service - Repository.",
+                description: "Reingegnerizzazione di una dashboard di Business Intelligence.",
                 chips: ["Angular", "TypeScript", "RxJS", "Spring Boot", "Java", "REST"],
                 company: {
                     name: "Maps Group | Sharing Knowledge",
                     link: "https://mapsgroup.it/"
-                },
-            },
-            {
-                period: "02/2018 - 04/2018",
-                title: "Elettricista assistente ⚡",
-                description: "Elettricista nell'edilizia in esperienza di Alternanza Scuola-Lavoro.",
-                chips: [],
-                company: {
-                    name: "Elettroboutique",
                 },
             },
             {
@@ -62,7 +53,37 @@ export const rowInfo: Section[] = [
                 title: "Arbitro di pallacanestro 🏀",
                 description: "Arbitro regionale di serie D, B/F e C/F (5a categoria).",
                 chips: ['Responsabilità']
-            }
+            },
+            {
+                period: "02/2018 - 04/2018",
+                title: "Elettricista assistente ⚡",
+                description: "Alternanza Scuola-Lavoro - Elettricista nell'edilizia.",
+                chips: [],
+                company: {
+                    name: "Elettroboutique",
+                },
+            },
+            {
+                company: {
+                    name: "I.T.I. Leonardo Da Vinci",
+                    link: "https://www.isdavincitorre.edu.it/",
+                },
+                period: "2018",
+                title: "Coding a basso livello 👨‍🏫",
+                description: "Alternanza Scuola-Lavoro - Spiegazione dell'informatica di base a alunni frequentanti il terzo anno della Scuola Secondaria di I grado.",
+                chips: []
+            },
+            {
+                company: {
+                    name: "I.T.I. Leonardo Da Vinci",
+                    link: "https://www.isdavincitorre.edu.it/",
+                },
+                period: "01/2016 - 03/2017",
+                title: "Sviluppatore App Android 📱",
+                description: "Alternanza Scuola-Lavoro - Creazione di un'applicazione Android, tramite la piattaforma App Inventor 2, con lo scopo di arricchire la conoscenza sulla raccolta differenziata nel territorio trapanese.",
+                chips: []
+            },
+
         ]
     },
     {

@@ -14,7 +14,7 @@
   @if (title()) {
   <h5
     class="card-title"
-    [ngClass]="themeService.isLight() ? '' : 'text-light'"
+    [ngClass]="themeService.isLight() ? 'text-dark' : 'text-light'"
     style="margin-bottom: 2px"
   >
     {{ title() }}
@@ -31,18 +31,23 @@
     {{ company()?.name }}
   </a>
   } @else {
-  {{ company()?.name }}
+  <div [ngClass]="themeService.isLight() ? 'link-dark' : 'link-light'">
+    {{ company()?.name }}
+  </div>
   } }
   <div style="margin-top: 16px">
     <!--Description-->
     @if (description()) {
-    <p class="card-text" [ngClass]="themeService.isLight() ? '' : 'text-light'">
+    <p
+      class="card-text"
+      [ngClass]="themeService.isLight() ? 'text-dark' : 'text-light'"
+    >
       {{ description() }}
     </p>
     }
     <!--List-->
     @if (list()) {
-    <ul [ngClass]="themeService.isLight() ? '' : 'text-light'">
+    <ul [ngClass]="themeService.isLight() ? 'text-dark' : 'text-light'">
       @for (item of list(); track $index) {
       <li>
         {{ item }}
@@ -52,10 +57,9 @@
     }
     <!--Chips-->
     @if (chips()) {
-    <div class="d-flex flex-row column-gap-1">
+    <div class="d-flex flex-row flex-wrap column-gap-1">
       @for (chip of chips(); track $index) {
       <app-chip [label]="chip" />
-
       }
     </div>
     }

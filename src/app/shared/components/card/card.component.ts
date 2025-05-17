@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, inject, input, signal } from '@angular/core';
-import { ChipComponent } from '../chip/chip.component';
+import { Component, computed, inject, input } from '@angular/core';
 import { CardBorder } from './card';
 import { ThemeService } from '../../service/theme/theme.service';
 import { BgColorType } from '../../service/theme/theme';
@@ -9,8 +8,7 @@ import { BgColorType } from '../../service/theme/theme';
   selector: 'app-card',
   standalone: true,
   imports: [
-    CommonModule,
-    ChipComponent
+    CommonModule
   ],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
