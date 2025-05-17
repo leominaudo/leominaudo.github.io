@@ -15,7 +15,7 @@ export const rowInfo: Section[] = [
         name: "Esperienze",
         info: [
             {
-                period: "03/2023 - 03/2025",
+                period: "03/2025 - Presente",
                 title: "Angular Developer 💻",
                 description: "Gruppo Zucchetti Hospitality - 5stelle* native cloud pms.",
                 chips: ["Angular", "TypeScript", "RxJS"],
