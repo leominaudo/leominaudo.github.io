@@ -21,17 +21,18 @@
   </h5>
   }
   <!--Company-->
-  @if (company()) {
+  @if (company()) { @if (company()?.link) {
 
   <a
     class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
     [ngClass]="themeService.isLight() ? 'link-dark' : 'link-light'"
-    href=""
+    [href]="company()?.link"
   >
     {{ company()?.name }}
   </a>
-
-  }
+  } @else {
+  {{ company()?.name }}
+  } }
   <div style="margin-top: 16px">
     <!--Description-->
     @if (description()) {
