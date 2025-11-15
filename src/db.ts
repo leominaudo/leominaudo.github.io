@@ -3,9 +3,9 @@ import { Section } from "./app/shared/components/row-info/rowInfo";
 
 export const cover: CoverInfo = {
     title: "Leonardo Minaudo",
-    subTitle: "FULLSTACK DEVELOPER",
+    subTitle: "SOFTWARE DEVELOPER",
     description:
-        "Sviluppatore software con esperienza in Angular e Spring Boot, con forte capacità di apprendimento e adattamento. Appassionato di tecnologia e innovazione.",
+        "Sviluppatore software con esperienza in Angular, con forte capacità di apprendimento e adattamento. Appassionato di tecnologia e innovazione.",
     avatarSrc: "/assets/image/photo.jpg"
 }
 
@@ -17,8 +17,8 @@ export const rowInfo: Section[] = [
             {
                 period: "03/2025 - Presente",
                 title: "Angular Developer 💻",
-                description: "Gruppo Zucchetti Hospitality - 5stelle* native cloud pms.",
-                chips: ["Angular", "TypeScript", "RxJS"],
+                description: "Sviluppo e manutenzione di un'applicazione gestionale per il settore alberghiero.",
+                chips: ["Angular", "TypeScript", "RxJS", "NgRx"],
                 company: {
                     name: "Zucchetti",
                     link: "https://www.zucchetti.it"
