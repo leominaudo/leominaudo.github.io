@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-typewriter',
-  templateUrl: './typewriter.component.html',
-  styleUrls: ['./typewriter.component.scss']
+    selector: 'app-typewriter',
+    templateUrl: './typewriter.component.html',
+    styleUrls: ['./typewriter.component.scss'],
+    standalone: false
 })
 export class TypewriterComponent implements OnInit {
   text: string = "Testo da scrivere...";

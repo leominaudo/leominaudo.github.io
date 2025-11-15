@@ -3,11 +3,10 @@ import { ThemeService } from '../../service/theme/theme.service';
 import { BgColorType } from '../../service/theme/theme';
 
 @Component({
-  selector: 'app-row',
-  standalone: true,
-  imports: [],
-  templateUrl: './row.component.html',
-  styleUrl: './row.component.scss'
+    selector: 'app-row',
+    imports: [],
+    templateUrl: './row.component.html',
+    styleUrl: './row.component.scss'
 })
 export class RowComponent {
   themeService = inject(ThemeService);

@@ -5,9 +5,10 @@ import { CoverInfo } from "./shared/components/cover/cover";
 import { Section } from "./shared/components/row-info/rowInfo";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent {
 

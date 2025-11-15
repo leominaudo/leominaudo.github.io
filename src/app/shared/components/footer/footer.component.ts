@@ -3,11 +3,10 @@ import { Component, inject } from '@angular/core';
 import { ThemeService } from '../../service/theme/theme.service';
 
 @Component({
-  selector: 'app-footer',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+    selector: 'app-footer',
+    imports: [CommonModule],
+    templateUrl: './footer.component.html',
+    styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
   themeService = inject(ThemeService);

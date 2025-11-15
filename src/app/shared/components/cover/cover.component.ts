@@ -19,11 +19,10 @@ import { ThemeService } from '../../service/theme/theme.service';
 import { CoverInfo } from './cover';
 
 @Component({
-  selector: 'app-cover',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './cover.component.html',
-  styleUrl: './cover.component.scss',
+    selector: 'app-cover',
+    imports: [CommonModule],
+    templateUrl: './cover.component.html',
+    styleUrl: './cover.component.scss'
 })
 export class CoverComponent implements AfterViewInit, OnDestroy {
   themeService = inject(ThemeService);

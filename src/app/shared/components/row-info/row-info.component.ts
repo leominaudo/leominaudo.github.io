@@ -6,11 +6,10 @@ import { RowComponent } from '../row/row.component';
 import { Section } from './rowInfo';
 
 @Component({
-  selector: 'app-row-info',
-  standalone: true,
-  imports: [CommonModule, RowComponent, CardInfoComponent, TagComponent],
-  templateUrl: './row-info.component.html',
-  styleUrl: './row-info.component.scss',
+    selector: 'app-row-info',
+    imports: [CommonModule, RowComponent, CardInfoComponent, TagComponent],
+    templateUrl: './row-info.component.html',
+    styleUrl: './row-info.component.scss'
 })
 export class RowInfoComponent {
   section = input<Section>();

@@ -8,11 +8,10 @@ import { CommonModule } from '@angular/common';
 import { ThemeService } from '../../service/theme/theme.service';
 
 @Component({
-  selector: 'app-card-info',
-  standalone: true,
-  imports: [CommonModule, CardComponent, ChipComponent],
-  templateUrl: './card-info.component.html',
-  styleUrl: './card-info.component.scss'
+    selector: 'app-card-info',
+    imports: [CommonModule, CardComponent, ChipComponent],
+    templateUrl: './card-info.component.html',
+    styleUrl: './card-info.component.scss'
 })
 export class CardInfoComponent {
   themeService = inject(ThemeService);
